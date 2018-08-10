@@ -32,14 +32,16 @@ exports.delete = id => {
         resolve(userGroupLinks)
     })
 }
-
 // delete a link for given user,
 // when deleting a user, this should be done.
 exports.deleteByUser = userId => {
     return new Promise((resolve, reject) => {
-        let index = userGroupLinks.findIndex(link => link.userId == userId)
-
-        userGroupLinks.splice(index, 1)
+        for (let i = 0; i < userGroupLinks.length; i++) {
+            if (userGroupLinks[i].userId == userId) {
+                userGroupLinks.splice(i, 1);
+                i--;
+            }
+        }
 
         resolve(userGroupLinks)
     })
