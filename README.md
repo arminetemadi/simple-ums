@@ -29,10 +29,10 @@ This is a simple react application for user management.
     ```
   or you can directly run the client by following command:
   
-    ```
+    
     cd <ROOT_DIR>/client
     npm start
-    ```
+    
 
 5. Jest is included for testing React components.
     ```javascript
@@ -80,21 +80,21 @@ Here is the structure of JSON responses:
 
   1. in successfull responses:
   
-    ```
+    
     {
       success: true,
       result: [...]   // array of objects of retrived data from server
     }
-    ```
+    
   
   2. in failed responses:
   
-    ```
+    
     {
       success: false,
       message: ''     // string of message text indicates the reason of failure
     }
-    ```
+    
 
 
 ## FAQ
